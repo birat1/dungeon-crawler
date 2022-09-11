@@ -20,16 +20,6 @@ public class PlayerMovement : MonoBehaviour
         moveDir.x = Input.GetAxisRaw("Horizontal");
         moveDir.y = Input.GetAxisRaw("Vertical");
 
-        if (Mathf.Abs(moveDir.x) > Mathf.Abs(moveDir.y)) // diagonal check: when x/y is greater than other, disable it
-        {
-            moveDir.y = 0;
-        }
-        else
-        {
-            moveDir.x = 0;
-        }
-        Debug.Log($"X: {moveDir.x} Y: {moveDir.y}");
-
         if (moveDir != Vector2.zero)
         {
             animator.SetFloat("Horizontal", moveDir.x);
