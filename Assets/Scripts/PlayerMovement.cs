@@ -6,9 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 4f;
 
-    bool isMovingX;
-    bool isMovingY;
-
     public Rigidbody2D rb;
     public Animator animator;
 
